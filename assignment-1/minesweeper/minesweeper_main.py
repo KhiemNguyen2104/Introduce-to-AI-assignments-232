@@ -1,14 +1,16 @@
+import time
+import psutil
 import random
 import itertools
 from copy import deepcopy
 
-# ----------------------------------
+# -----------------------------------
 # The value of a cell:
-#      -3: masked
-#      -2: empty
-#      -1: bomb
-#      0 - 8: number of bombs around
-# ----------------------------------
+#      -3: masked.
+#      -2: empty.
+#      -1: bomb.
+#      0 - 8: number of bombs around.
+# -----------------------------------
 
 class MineSweeperCore:
     def __init__(self, rows, columns, mines):
@@ -47,24 +49,25 @@ class MineSweeperCore:
     def place_mines(self):
         cells = [(x, y) for x in range(self.rows) for y in range(self.columns)]
         bomb_cells = random.sample(cells, self.mines)
-        for x, y in bomb_cells:
-            self.map[y][x] = -1
+        # print("Bomb cells: {}\n".format(bomb_cells))
+        for pos in bomb_cells:
+            self.map[pos[0]][pos[1]] = -1
     
     def get_bomb_around(self, x, y):
-        num_of_bombs = 0
+        ls = []
         for l in range(-1, 2):
             for o in range(-1, 2):
                 if (l != 0 or o != 0) and self.in_range(x + l, y + o) and self.map[x + l][y + o] == -1:
-                    num_of_bombs += 1
-        return num_of_bombs
+                    ls.append((x + l, y + o))
+        return ls
 
     def get_empty_around(self, x, y):
-        num_of_empty = 0
+        ls = []
         for l in range(-1, 2):
             for o in range(-1, 2):
                 if (l != 0 or o != 0) and self.in_range(x + l, y + o) and self.map[x + l][y + o] == -2:
-                    num_of_empty += 1
-        return num_of_empty
+                    ls.append((x + l, y + o))
+        return ls
 
     def check_completed(self, x, y):
         if self.map[x][y] == -2:
@@ -87,30 +90,25 @@ class MineSweeperCore:
     def place_numbers(self):
         for cell in self.get_mines_postion():
             nums = random.choice([1, 2])
-            for _ in range(nums):
-                while (1):
-                    l = random.choice([-1, 0, 1])
-                    o = random.choice([-1, 0, 1])
-                    if (l != 0 or o != 0):
-                        if self.in_range(cell[0] + l, cell[1] + o) and self.map[cell[0] + l][cell[1] + o] == -2:
-                            self.map[cell[0] + l][cell[1] + o] = self.get_bomb_around(cell[0] + l, cell[1] + o)
-                            break
-                    else:
-                        continue
+            emptys = self.get_empty_around(cell[0], cell[1])
+            if len(emptys) == 0:
+                pass
+            elif nums > len(emptys):
+                nums = len(emptys)
+                combinations = list(itertools.combinations(emptys, nums))
+                pos = random.choice(combinations)
+                for e in pos:
+                    self.map[e[0]][e[1]] = len(self.get_bomb_around(e[0], e[1]))
         for x in range(self.rows):
             for y in range(self.columns):
                 if not self.check_completed(x, y) and self.map[x][y] == -2:
                     choice = random.choice(range(1, 101))
-                    if choice >= 30 and self.get_empty_around(x, y) > 0:
-                        ls = []
-                        for l in range(-1, 2):
-                            for o in range(-1, 2):
-                                if (l != 0 or o != 0) and self.in_range(x + l, y + o) and self.map[x + l][y + o] == -2:
-                                    ls.append((x + l, y + o))
+                    if choice >= 30 and len(self.get_empty_around(x, y)) > 0:
+                        ls = self.get_empty_around(x, y)
                         position = random.choice(ls)
-                        self.map[position[0]][position[1]] = self.get_bomb_around(position[0], position[1])
+                        self.map[position[0]][position[1]] = len(self.get_bomb_around(position[0], position[1]))
                     else:
-                        self.map[x][y] = self.get_bomb_around(x, y)
+                        self.map[x][y] = len(self.get_bomb_around(x, y))
 
     def print_map(self):
         max_row_length = max(len(' | '.join(map(str, row))) for row in self.map)
@@ -121,8 +119,19 @@ class MineSweeperCore:
 
     # Official functions
 
-    def Heuristic_function(self):
-        pass
+    def official_get_map(self):
+        return deepcopy(self.official_map)
+
+    def official_set_map(self, map):
+        self.official_map = deepcopy(map)
+
+    def heuristic_function(self):
+        value = 0
+        ls = self.official_get_number_positions()
+        for pos in ls:
+            if self.official_check_completed(pos[0], pos[1]):
+                value += 1
+        return value
 
     def official_get_number_positions(self):
         ls = []
@@ -246,6 +255,24 @@ class MineSweeperCore:
         for pos in self.official_get_number_positions():
             if not self.official_check_completed(pos[0], pos[1]):
                 return False
+        return True
+    
+    def official_get_best_potential_cell(self):
+        ls = self.official_get_number_positions()
+        max_value = 0
+        max_pos = (0, 0)
+        for pos in ls:
+            if not self.official_check_completed(pos[0], pos[1]):
+                remainder_bombs = self.official_map[pos[0]][pos[1]] - len(self.official_get_bombs_around(pos[0], pos[1]))
+                remainder_maskeds = self.official_get_masked_around(pos[0], pos[1])
+                # print("Details about {}: {}\n  - Remainder bombs: {}\n  - Remainder maskeds: {}\n".format(pos, self.official_map[pos[0]][pos[1]], remainder_bombs, remainder_maskeds))
+                if max_value < (remainder_bombs/len(remainder_maskeds)):
+                    max_value = self.official_map[pos[0]][pos[1]]
+                    max_pos = (pos[0], pos[1])
+                elif max_value == (remainder_bombs/len(remainder_maskeds)):
+                    if self.official_map[pos[0]][pos[1]] < self.official_map[max_pos[0]][max_pos[1]]:
+                        max_pos = (pos[0], pos[1])
+        return max_pos
 
     def check_error_map(self):
         for pos in self.official_get_number_positions():
@@ -266,20 +293,7 @@ class MineSweeperCore:
             print("The current map:\n")
             self.official_print_map()
             print("The back-up map: {}\n".format(case_map))
-            ls = self.official_get_number_positions()
-            max_value = 0
-            max_pos = (0, 0)
-            for pos in ls:
-                if not self.official_check_completed(pos[0], pos[1]):
-                    remainder_bombs = self.official_map[pos[0]][pos[1]] - len(self.official_get_bombs_around(pos[0], pos[1]))
-                    remainder_maskeds = self.official_get_masked_around(pos[0], pos[1])
-                    print("Details about {}: {}\n  - Remainder bombs: {}\n  - Remainder maskeds: {}\n".format(pos, self.official_map[pos[0]][pos[1]], remainder_bombs, remainder_maskeds))
-                    if max_value < (remainder_bombs/len(remainder_maskeds)):
-                        max_value = self.official_map[pos[0]][pos[1]]
-                        max_pos = (pos[0], pos[1])
-                    elif max_value == (remainder_bombs/len(remainder_maskeds)):
-                        if self.official_map[pos[0]][pos[1]] < self.official_map[max_pos[0]][max_pos[1]]:
-                            max_pos = (pos[0], pos[1])
+            max_pos = self.official_get_best_potential_cell()
             remainder_bombs = self.official_map[max_pos[0]][max_pos[1]] - len(self.official_get_bombs_around(max_pos[0], max_pos[1]))
             maskeds = self.official_get_masked_around(max_pos[0], max_pos[1])
             masked_combinations = list(itertools.combinations(maskeds, remainder_bombs))
@@ -291,15 +305,14 @@ class MineSweeperCore:
                 for e in pos:
                     self.move(e[0], e[1], 'r')
                 self.dfs_const_rules(max_pos[0], max_pos[1])
-                print("Map in checking:\n")
+                print("Map is in checking:")
                 self.official_print_map()
-                print("\n")
                 if not self.check_error_map():
-                    print("Return the backup map A: {}\n".format(temp_backup_map))
+                    print("Caught error! Return the backup map!\n")
                     self.official_map = deepcopy(temp_backup_map)
                 else:
                     if not self.dfs_solution():
-                        print("Return the backup map B: {}\n".format(temp_backup_map))
+                        print("Not solution here! Return the backup map!\n")
                         self.official_map = deepcopy(temp_backup_map)
                     else:
                         return True
@@ -320,52 +333,81 @@ class MineSweeperCore:
             print("The current map:\n")
             self.official_print_map()
             print("The back-up map: {}\n".format(case_map))
-            ls = self.official_get_number_positions()
-            max_value = 0
-            max_pos = (0, 0)
-            for pos in ls:
-                if not self.official_check_completed(pos[0], pos[1]):
-                    remainder_bombs = self.official_map[pos[0]][pos[1]] - len(self.official_get_bombs_around(pos[0], pos[1]))
-                    remainder_maskeds = self.official_get_masked_around(pos[0], pos[1])
-                    print("Details about {}: {}\n  - Remainder bombs: {}\n  - Remainder maskeds: {}\n".format(pos, self.official_map[pos[0]][pos[1]], remainder_bombs, remainder_maskeds))
-                    if max_value < (remainder_bombs/len(remainder_maskeds)):
-                        max_value = self.official_map[pos[0]][pos[1]]
-                        max_pos = (pos[0], pos[1])
-                    elif max_value == (remainder_bombs/len(remainder_maskeds)):
-                        if self.official_map[pos[0]][pos[1]] < self.official_map[max_pos[0]][max_pos[1]]:
-                            max_pos = (pos[0], pos[1])
+            max_pos = self.official_get_best_potential_cell()
             remainder_bombs = self.official_map[max_pos[0]][max_pos[1]] - len(self.official_get_bombs_around(max_pos[0], max_pos[1]))
             maskeds = self.official_get_masked_around(max_pos[0], max_pos[1])
             masked_combinations = list(itertools.combinations(maskeds, remainder_bombs))
             print("The position for go deeper is: {} with {} bombs remain".format(max_pos, remainder_bombs))
-            print("Position of maskeds: {}".format(maskeds))
+            print("Position of maskeds: {}\n".format(maskeds))
             print("The combinations: {}\n".format(masked_combinations))
+            candidate = []
             for pos in masked_combinations:
-                temp_backup_map = deepcopy(self.official_map)
+                backup_map = deepcopy(self.official_map)
                 for e in pos:
                     self.move(e[0], e[1], 'r')
                 self.dfs_const_rules(max_pos[0], max_pos[1])
-                print("Map in checking:\n")
-                self.official_print_map()
-                print("\n")
-                if not self.check_error_map():
-                    print("Return the backup map A: {}\n".format(temp_backup_map))
-                    self.official_map = deepcopy(temp_backup_map)
+                if not self.check_error_map:
+                    self.official_map = deepcopy(backup_map)
                 else:
-                    if not self.dfs_solution():
-                        print("Return the backup map B: {}\n".format(temp_backup_map))
-                        self.official_map = deepcopy(temp_backup_map)
-                    else:
-                        return True
+                    value = self.heuristic_function()
+                    candidate.append((pos, value))
+                    self.official_map = deepcopy(backup_map)
+            candidate = sorted(candidate, key=lambda x:x[-1], reverse=True)
+            for cases in candidate:
+                backup_map = deepcopy(self.official_map)
+                print("In case {}:\n".format(cases))
+                for e in cases[0]:
+                    self.move(e[0], e[1], 'r')
+                self.dfs_const_rules(max_pos[0], max_pos[1])
+                print("Map is in checking:\n")
+                self.official_print_map()
+                if not self.hill_climbing_solution():
+                    print("Not solution here! Return the backup map!\n")
+                    self.official_map = deepcopy(backup_map)
+                else:
+                    return True
             if not self.check_error_map() or not self.check_completed_map():
                 return False
         return True
 
 if __name__ == "__main__":
-    minesweeper = MineSweeperCore(15, 15, 14)
-    minesweeper.print_map()
-    # print(minesweeper.official_get_masked_around(0, 1))
-    if minesweeper.dfs_solution() and not minesweeper.check_error_map() and minesweeper.check_completed_map():
-        print("Successful solution!\n")
-    minesweeper.official_print_map()
-    print("Thanks for playing!")
+    minesweeper = MineSweeperCore(15, 15, 100)
+    base_map = minesweeper.official_get_map()
+    
+    start_time = time.time()
+    
+    print("DFS Solution:\n")
+    if minesweeper.dfs_solution() and minesweeper.check_error_map() and minesweeper.check_completed_map():
+        print("\nSuccessful solution!\n")
+        minesweeper.official_print_map()
+        print("Thanks for playing!")
+    else:
+        print("ERROR!")
+        
+    print("-" * 30)
+    pid = psutil.Process().pid
+    process = psutil.Process(pid)
+    memory_info = process.memory_info()
+
+    end_time = time.time()
+    print("Running time: {} (s)\nMemory usage: {} (MiBs)\n".format(end_time - start_time, memory_info.rss/(1024*1024)))
+    input()
+    
+    minesweeper.official_set_map(base_map)
+
+    start_time = time.time()
+    print("Heuristic Solution:\n")
+    if minesweeper.hill_climbing_solution() and minesweeper.check_error_map() and minesweeper.check_completed_map():
+        print("\nSuccessful solution!\n")
+        minesweeper.official_print_map()
+        print("Thanks for playing!")
+    else:
+        print("ERROR!")
+        
+    print("-" * 30)
+    pid = psutil.Process().pid
+    process = psutil.Process(pid)
+    memory_info = process.memory_info()
+
+    end_time = time.time()
+    print("Running time: {} (s)\nMemory usage: {} (MiBs)\n".format(end_time - start_time, memory_info.rss/(1024*1024)))
