@@ -1,5 +1,6 @@
-from numpy import array, uint8, zeros
-from random import randint, choices, random
+from numpy import array, uint8, zeros, copy
+from numpy.random import seed, shuffle
+from random import randint, choices, random, sample
 from timeit import default_timer
 import matplotlib.pyplot as plt
 import tracemalloc
@@ -54,7 +55,7 @@ class DFS:
 
         return None
         
-    def result(self, action):
+    def result(self, action) -> None:
         i, j, val = action
         idx, bitmask = i * 9 + j, 1 << val
 
@@ -64,8 +65,6 @@ class DFS:
         self._zeros ^= (1 << idx)
         self._val = 1
         self._lst[i, j] = val
-
-        return self
 
     def undo(self, action) -> None:
         i, j, val = action
@@ -81,7 +80,7 @@ class DFS:
     def _check(self, i: int, j: int, val: int) -> bool:
         return (self._rows[i] | self._cols[j] | self._blocks[i // 3, j // 3]) & (1 << val) == 0
     
-    def solve(self, display) -> bool:
+    def _dfs(self, display: bool) -> bool:
         if display:
             print(self._lst)
 
@@ -89,11 +88,16 @@ class DFS:
             return True
 
         while (action := self.get_next_action()) != None:
-            if DFS.solve(self.result(action), display):
+            self.result(action)
+            if self._dfs(display):
                 return True
             self.undo(action)
 
         return False
+    
+    def solve(self, display: bool) -> tuple[bool, array]:
+        success = self._dfs(display)
+        return success, copy(self._lst)
 
 class GA:
     MAX_FITNESS = 216
@@ -276,6 +280,39 @@ class GA:
         return False, best_str, lst
 
 class Sudoku:
+    def Generator(k: int, random_seed = None) -> array:
+        if k < 0:
+            k = 0
+        elif k > 81:
+            k = 81
+
+        if random_seed != None:
+            seed(random_seed)
+
+        arr = zeros((9, 9), dtype=uint8)
+
+        x1, x2, x3 = array(range(1, 10), dtype=uint8).reshape(3, 3), \
+            array(range(1, 10), dtype=uint8).reshape(3, 3), \
+                array(range(1, 10), dtype=uint8).reshape(3, 3)
+        
+        shuffle(x1)
+        shuffle(x2)
+        shuffle(x3)
+
+        arr[0:3, 0:3] = x1
+        arr[3:6, 3:6] = x2
+        arr[6:9, 6:9] = x3
+
+        obj = Sudoku(arr)
+        _, arr = obj.DFS(display=False)
+
+        print(arr)
+        arr = arr.flatten()
+        arr[sample(range(0, 81), k=k)] = 0
+        arr = arr.reshape(9, 9)
+
+        return arr
+
     def _string_to_numpy(s: str) -> array:
         arr = zeros((9, 9), dtype=uint8)
 
@@ -298,9 +335,9 @@ class Sudoku:
         elif self._lst.min() < 0:
             raise ValueError("List must contain only value from 0 to 9")
 
-    def DFS(self, display: bool = True):
+    def DFS(self, display: bool = True) -> tuple[bool, array]:
         obj = DFS(self._lst)
-        obj.solve(display)
+        return obj.solve(display)
 
     def GA(self, n_iters: int = 5000, random_selection: float = .4, population_size: int = 1000, mutation_rate: float = .2):
         obj = GA(self._lst)
@@ -321,7 +358,7 @@ class Sudoku:
     
     def dfs_statistics(self, n_experiments = 100):
         lst = []
-        print(self.DFS())
+        
         print("Calculating statistics...")
         for iter in range(n_experiments):
             st = default_timer()
@@ -330,14 +367,16 @@ class Sudoku:
 
             tracemalloc.start()
             self.DFS(display=False)
-            lst.append([et - st, tracemalloc.get_traced_memory()[1]])
+            m = tracemalloc.get_traced_memory()[1]
             tracemalloc.stop()
+            
+            lst.append([et - st, m])
 
         lst = array(lst)
         
         m = lst.mean(axis=0)
-        s = lst.var(axis=0)
+        s = lst.std(axis=0)
 
         return {"n_experiments:" : n_experiments, 
-                "Runtime" : {"Mean" : m[0], "Variance" : s[0]}, 
-                "Memory" : {"Mean" : m[1], "Variance" : s[1]}}
+                "Runtime" : {"Mean" : m[0], "Std" : s[0]}, 
+                "Memory" : {"Mean" : m[1], "Std" : s[1]}}
