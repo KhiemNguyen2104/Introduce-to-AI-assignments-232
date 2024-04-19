@@ -1,4 +1,5 @@
 from Sudoku import Sudoku
+from numpy.random import seed
 
 lst = [
     [3,0,6,5,0,8,4,0,0],
@@ -12,15 +13,9 @@ lst = [
     [0,0,5,2,0,6,3,0,0]
 ]
 
-# obj = Sudoku(lst)
-# obj.DFS()
-# obj.GA(n_iters=1000, mutation_rate=.5)
-# print(obj.dfs_statistics())
+obj = Sudoku(lst)
+obj.DFS()
+obj.GA(n_iters=5000, display=True, plot_fitness=True)
 
-# lst = [[9] * 9] * 9
-# lst[0][0] = 0
-# print(lst)
-# obj = Sudoku(lst)
-# obj.GA(n_iters=10)
-
-print(Sudoku.Generator(50))
+# obj = Sudoku([[0] * 9] * 9)
+# obj.dfs_runtime()

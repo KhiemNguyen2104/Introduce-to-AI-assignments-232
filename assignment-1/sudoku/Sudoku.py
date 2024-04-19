@@ -1,5 +1,5 @@
 from numpy import array, uint8, zeros, copy
-from numpy.random import seed, shuffle
+from numpy.random import shuffle, seed
 from random import randint, choices, random, sample
 from timeit import default_timer
 import matplotlib.pyplot as plt
@@ -220,30 +220,31 @@ class GA:
         
         return mutated_s
 
-    def solve(self, n_iters: int, random_selection: float, population_size: int, mutation_rate: float):
+    def solve(self, n_iters: int, population_size: int, mutation_rate: float, display: bool):
         # check input
         if mutation_rate > 1:
             mutation_rate = 1
         elif mutation_rate < 0:
             mutation_rate = 0
         
-        if random_selection > 1:
-            random_selection = 1
-        elif random_selection < 0:
-            random_selection = 0
-        elif random_selection < .5:
-            random_selection = .5
+        # if random_selection > 1:
+        #     random_selection = 1
+        # elif random_selection < 0:
+        #     random_selection = 0
+        # elif random_selection < .5:
+        #     random_selection = .5
 
         if population_size <= 0:
             return False, self._s, []
         
         # initial population
-        print("Generating...")
+        if display:
+            print("Generating...")
         lst, population = [], [self._generate() for _ in range(population_size)]
-        print("Done")
 
         for iter in range(1, n_iters + 1):
-            print("Visiting iterate ", iter)
+            if display:
+                print("Visiting iterate ", iter)
             converged, max_fitness, min_fitness, best_str, worst_str, fit_lst =  GA._check_converge(population)
 
             lst.append([max_fitness, min_fitness])
@@ -254,10 +255,11 @@ class GA:
             elif max_fitness == 0:
                 return False, best_str, lst
             
-            print("   Best:", max_fitness, "-", best_str)
-            print("  Worst:", min_fitness, "-", worst_str)
+            if display:
+                print("   Best:", max_fitness, "-", best_str)
+                print("  Worst:", min_fitness, "-", worst_str)
 
-            population = [x for _, x in sorted(zip(fit_lst, population))]
+            # population = [x for _, x in sorted(zip(fit_lst, population))]
 
             # select parents
             # p = int(random_selection * population_size)
@@ -280,14 +282,11 @@ class GA:
         return False, best_str, lst
 
 class Sudoku:
-    def Generator(k: int, random_seed = None) -> array:
+    def Generator(k: int) -> array:
         if k < 0:
             k = 0
         elif k > 81:
             k = 81
-
-        if random_seed != None:
-            seed(random_seed)
 
         arr = zeros((9, 9), dtype=uint8)
 
@@ -306,7 +305,6 @@ class Sudoku:
         obj = Sudoku(arr)
         _, arr = obj.DFS(display=False)
 
-        print(arr)
         arr = arr.flatten()
         arr[sample(range(0, 81), k=k)] = 0
         arr = arr.reshape(9, 9)
@@ -339,44 +337,53 @@ class Sudoku:
         obj = DFS(self._lst)
         return obj.solve(display)
 
-    def GA(self, n_iters: int = 5000, random_selection: float = .4, population_size: int = 1000, mutation_rate: float = .2):
+    def GA(self, n_iters, population_size: int = 1000, mutation_rate: float = .2, plot_fitness: bool = False, display: bool = False):
         obj = GA(self._lst)
-        success, s, lst = obj.solve(n_iters, random_selection, population_size, mutation_rate)
+        success, s, lst = obj.solve(n_iters, population_size, mutation_rate, display)
         print(Sudoku._string_to_numpy(s))
         if not success:
             print("Stuck at local maxima")
         # plot fitness vs iterate
-        lst = array(lst)
-        plt.plot(lst[:, 0], label="Best")
-        plt.plot(lst[:, 1], label="Worst")
-        plt.title("Fitness score vs. Iterate")
-        plt.xlabel("Fitness score")
-        plt.ylabel("Iterate")
-        plt.legend()
-        plt.show()
+        if plot_fitness:
+            lst = array(lst)
+            plt.plot(lst[:, 0], label="Best")
+            plt.plot(lst[:, 1], label="Worst")
+            plt.title("Fitness score vs. Iterate")
+            plt.xlabel("Fitness score")
+            plt.ylabel("Iterate")
+            plt.legend()
+            plt.show()
 
+    def dfs_memory(self):
+        print("Calculating memory...")
+        tracemalloc.start()
+        success, _ = self.DFS(display=False)
+        m = tracemalloc.get_traced_memory()[1]
+        tracemalloc.stop()
+        print("Memory:", m)
+        return m
     
-    def dfs_statistics(self, n_experiments = 100):
-        lst = []
-        
-        print("Calculating statistics...")
-        for iter in range(n_experiments):
-            st = default_timer()
-            self.DFS(display=False)
-            et = default_timer()
-
-            tracemalloc.start()
-            self.DFS(display=False)
-            m = tracemalloc.get_traced_memory()[1]
-            tracemalloc.stop()
-            
-            lst.append([et - st, m])
-
-        lst = array(lst)
-        
-        m = lst.mean(axis=0)
-        s = lst.std(axis=0)
-
-        return {"n_experiments:" : n_experiments, 
-                "Runtime" : {"Mean" : m[0], "Std" : s[0]}, 
-                "Memory" : {"Mean" : m[1], "Std" : s[1]}}
+    def dfs_runtime(self):
+        print("Calculating runtime...")
+        st = default_timer()
+        self.DFS(display=False)
+        et = default_timer()
+        print("Runtime:", et - st)
+        return et - st
+    
+    def ga_runtime(self, n_iters, population_size: int = 1000, mutation_rate: float = .2):
+        print("Calculating runtime...")
+        st = default_timer()
+        self.GA(n_iters=n_iters, population_size=population_size, mutation_rate=mutation_rate)
+        et = default_timer()
+        print("Runtime:", et - st)
+        return et - st
+    
+    def ga_memory(self, n_iters, population_size: int = 1000, mutation_rate: float = .2):
+        print("Calculating memory...")
+        tracemalloc.start()
+        self.GA(n_iters=n_iters, population_size=population_size, mutation_rate=mutation_rate)
+        m = tracemalloc.get_traced_memory()[1]
+        tracemalloc.stop()
+        print("Memory:", m)
+        return m
