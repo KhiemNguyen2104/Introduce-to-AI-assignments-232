@@ -1,0 +1,811 @@
+Hill climbing Solution with i = 0:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.63 KB
+Excecuting time: 0.05 s
+
+Hill climbing Solution with i = 1:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 7.24 KB
+Excecuting time: 0.03 s
+
+Hill climbing Solution with i = 2:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 9.7 KB
+Excecuting time: 0.04 s
+
+Hill climbing Solution with i = 3:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 9.6 KB
+Excecuting time: 0.06 s
+
+Hill climbing Solution with i = 4:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 11.66 KB
+Excecuting time: 0.07 s
+
+Hill climbing Solution with i = 5:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 14.69 KB
+Excecuting time: 0.05 s
+
+Hill climbing Solution with i = 6:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 17.8 KB
+Excecuting time: 0.11 s
+
+Hill climbing Solution with i = 7:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 20.22 KB
+Excecuting time: 0.09 s
+
+Hill climbing Solution with i = 8:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 18.67 KB
+Excecuting time: 0.13 s
+
+Hill climbing Solution with i = 9:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 26.73 KB
+Excecuting time: 0.13 s
+
+Hill climbing Solution with i = 10:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 26.7 KB
+Excecuting time: 0.14 s
+
+Hill climbing Solution with i = 11:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 23.22 KB
+Excecuting time: 0.58 s
+
+Hill climbing Solution with i = 12:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 27.33 KB
+Excecuting time: 0.13 s
+
+Hill climbing Solution with i = 13:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 34.03 KB
+Excecuting time: 0.1 s
+
+Hill climbing Solution with i = 14:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 31.08 KB
+Excecuting time: 0.12 s
+
+Hill climbing Solution with i = 15:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 30.53 KB
+Excecuting time: 0.15 s
+
+Hill climbing Solution with i = 16:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 33.19 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 17:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 32.89 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 18:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 36.31 KB
+Excecuting time: 0.21 s
+
+Hill climbing Solution with i = 19:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 36.86 KB
+Excecuting time: 0.15 s
+
+Hill climbing Solution with i = 20:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 32.79 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 21:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 37.77 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 22:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.47 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 23:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.14 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 24:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.36 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 25:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.04 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 26:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 39.59 KB
+Excecuting time: 0.34 s
+
+Hill climbing Solution with i = 27:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.43 KB
+Excecuting time: 0.22 s
+
+Hill climbing Solution with i = 28:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.53 KB
+Excecuting time: 0.37 s
+
+Hill climbing Solution with i = 29:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.84 KB
+Excecuting time: 0.17 s
+
+Hill climbing Solution with i = 30:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.51 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 31:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.55 KB
+Excecuting time: 0.29 s
+
+Hill climbing Solution with i = 32:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.25 KB
+Excecuting time: 0.21 s
+
+Hill climbing Solution with i = 33:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.72 KB
+Excecuting time: 0.21 s
+
+Hill climbing Solution with i = 34:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.5 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 35:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 50.8 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 36:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 52.4 KB
+Excecuting time: 0.21 s
+
+Hill climbing Solution with i = 37:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.26 KB
+Excecuting time: 0.17 s
+
+Hill climbing Solution with i = 38:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.73 KB
+Excecuting time: 0.47 s
+
+Hill climbing Solution with i = 39:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.41 KB
+Excecuting time: 0.24 s
+
+Hill climbing Solution with i = 40:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 48.57 KB
+Excecuting time: 0.23 s
+
+Hill climbing Solution with i = 41:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.13 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 42:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 48.96 KB
+Excecuting time: 0.22 s
+
+Hill climbing Solution with i = 43:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 53.5 KB
+Excecuting time: 0.19 s
+
+Hill climbing Solution with i = 44:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.5 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 45:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.71 KB
+Excecuting time: 0.22 s
+
+Hill climbing Solution with i = 46:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.65 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 47:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 48.33 KB
+Excecuting time: 0.22 s
+
+Hill climbing Solution with i = 48:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.3 KB
+Excecuting time: 0.19 s
+
+Hill climbing Solution with i = 49:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.21 KB
+Excecuting time: 0.19 s
+
+Hill climbing Solution with i = 50:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.29 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 51:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 50.25 KB
+Excecuting time: 0.17 s
+
+Hill climbing Solution with i = 52:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 46.33 KB
+Excecuting time: 0.15 s
+
+Hill climbing Solution with i = 53:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.78 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 54:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.51 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 55:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 46.95 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 56:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.91 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 57:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.66 KB
+Excecuting time: 0.18 s
+
+Hill climbing Solution with i = 58:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.81 KB
+Excecuting time: 0.2 s
+
+Hill climbing Solution with i = 59:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.26 KB
+Excecuting time: 0.14 s
+
+Hill climbing Solution with i = 60:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.41 KB
+Excecuting time: 0.17 s
+
+Hill climbing Solution with i = 61:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.84 KB
+Excecuting time: 0.19 s
+
+Hill climbing Solution with i = 62:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 36.73 KB
+Excecuting time: 0.15 s
+
+Hill climbing Solution with i = 63:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.43 KB
+Excecuting time: 0.16 s
+
+Hill climbing Solution with i = 64:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.66 KB
+Excecuting time: 0.12 s
+
+Hill climbing Solution with i = 65:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 39.57 KB
+Excecuting time: 0.11 s
+
+Hill climbing Solution with i = 66:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 34.17 KB
+Excecuting time: 0.11 s
+
+Hill climbing Solution with i = 67:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.0 KB
+Excecuting time: 0.12 s
+
+Hill climbing Solution with i = 68:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 32.79 KB
+Excecuting time: 0.1 s
+
+Hill climbing Solution with i = 69:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 33.55 KB
+Excecuting time: 0.14 s
+
+Hill climbing Solution with i = 70:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 32.66 KB
+Excecuting time: 0.13 s
+
+Hill climbing Solution with i = 71:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 29.46 KB
+Excecuting time: 0.15 s
+
+Hill climbing Solution with i = 72:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 26.7 KB
+Excecuting time: 0.12 s
+
+Hill climbing Solution with i = 73:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 22.58 KB
+Excecuting time: 0.08 s
+
+Hill climbing Solution with i = 74:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 25.88 KB
+Excecuting time: 0.1 s
+
+Hill climbing Solution with i = 75:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 25.73 KB
+Excecuting time: 0.1 s
+
+Hill climbing Solution with i = 76:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 18.93 KB
+Excecuting time: 0.06 s
+
+Hill climbing Solution with i = 77:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 22.12 KB
+Excecuting time: 0.07 s
+
+Hill climbing Solution with i = 78:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 20.34 KB
+Excecuting time: 0.07 s
+
+Hill climbing Solution with i = 79:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 14.53 KB
+Excecuting time: 0.06 s
+
+Hill climbing Solution with i = 80:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 15.18 KB
+Excecuting time: 0.04 s
+
+Hill climbing Solution with i = 81:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 13.22 KB
+Excecuting time: 0.05 s
+
+Hill climbing Solution with i = 82:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 8.3 KB
+Excecuting time: 0.05 s
+
+Hill climbing Solution with i = 83:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 13.81 KB
+Excecuting time: 0.03 s
+
+Hill climbing Solution with i = 84:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 9.61 KB
+Excecuting time: 0.02 s
+
+Hill climbing Solution with i = 85:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 13.24 KB
+Excecuting time: 0.05 s
+
+Hill climbing Solution with i = 86:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 8.27 KB
+Excecuting time: 0.03 s
+
+Hill climbing Solution with i = 87:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 10.39 KB
+Excecuting time: 0.03 s
+
+Hill climbing Solution with i = 88:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 5.76 KB
+Excecuting time: 0.03 s
+
+Hill climbing Solution with i = 89:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 6.39 KB
+Excecuting time: 0.02 s
+
+Hill climbing Solution with i = 90:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 3.1 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 91:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 4.43 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 92:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 4.46 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 93:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.73 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 94:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.72 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 95:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.37 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 96:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.35 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 97:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.34 KB
+Excecuting time: 0.01 s
+
+Hill climbing Solution with i = 98:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.34 KB
+Excecuting time: 0.0 s
+
+Hill climbing Solution with i = 99:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.32 KB
+Excecuting time: 0.0 s
+
+Hill climbing Solution with i = 100:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.17 KB
+Excecuting time: 0.0 s
+
+==========================================================================================
+Memory tracing:  [0.63, 7.24, 9.7, 9.6, 11.66, 14.69, 17.8, 20.22, 18.67, 26.73, 26.7, 23.22, 27.33, 34.03, 31.08, 30.53, 33.19, 32.89, 36.31, 36.86, 32.79, 37.77, 40.47, 43.14, 40.36, 38.04, 39.59, 41.43, 43.53, 38.84, 45.51, 49.55, 44.25, 44.72, 42.5, 50.8, 52.4, 43.26, 45.73, 47.41, 48.57, 45.13, 48.96, 53.5, 41.5, 47.71, 47.65, 48.33, 44.3, 49.21, 47.29, 50.25, 46.33, 42.78, 40.51, 46.95, 44.91, 44.66, 40.81, 40.26, 40.41, 38.84, 36.73, 43.43, 41.66, 39.57, 34.17, 41.0, 32.79, 33.55, 32.66, 29.46, 26.7, 22.58, 25.88, 25.73, 18.93, 22.12, 20.34, 14.53, 15.18, 13.22, 8.3, 13.81, 9.61, 13.24, 8.27, 10.39, 5.76, 6.39, 3.1, 4.43, 4.46, 1.73, 1.72, 0.37, 0.35, 0.34, 0.34, 0.32, 0.17]
+Executing time tracing:  [51.75, 26.93, 42.83, 62.02, 72.7, 47.9, 112.26, 94.55, 127.96, 128.14, 138.09, 580.03, 131.61, 103.32, 115.65, 150.51, 200.64, 163.01, 206.84, 152.96, 156.16, 159.44, 201.03, 181.69, 156.91, 200.48, 335.47, 219.32, 373.05, 172.48, 184.58, 285.59, 207.15, 209.81, 200.58, 198.22, 209.27, 166.45, 466.81, 235.29, 225.78, 178.38, 219.47, 188.06, 175.05, 222.39, 175.91, 222.7, 188.21, 188.02, 175.75, 169.32, 150.3, 156.72, 175.71, 197.46, 162.9, 175.3, 197.61, 144.43, 169.1, 188.01, 152.99, 158.64, 122.67, 106.88, 114.34, 122.27, 100.17, 137.13, 125.79, 153.22, 122.48, 81.26, 103.49, 97.07, 64.83, 73.32, 68.27, 58.83, 41.62, 52.26, 50.72, 33.02, 21.11, 46.22, 29.61, 26.69, 27.03, 17.89, 11.95, 10.21, 13.21, 13.44, 12.91, 9.89, 7.66, 7.1, 3.92, 4.49, 0.4]

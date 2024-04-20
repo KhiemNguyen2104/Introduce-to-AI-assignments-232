@@ -1,0 +1,811 @@
+DFS Solution with i = 0:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.68 KB
+Excecuting time: 0.06 s
+
+DFS Solution with i = 1:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 4.21 KB
+Excecuting time: 0.04 s
+
+DFS Solution with i = 2:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 3.42 KB
+Excecuting time: 0.05 s
+
+DFS Solution with i = 3:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 11.63 KB
+Excecuting time: 0.1 s
+
+DFS Solution with i = 4:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 9.01 KB
+Excecuting time: 0.06 s
+
+DFS Solution with i = 5:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 14.28 KB
+Excecuting time: 0.09 s
+
+DFS Solution with i = 6:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 11.12 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 7:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 20.46 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 8:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 16.72 KB
+Excecuting time: 0.12 s
+
+DFS Solution with i = 9:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 18.29 KB
+Excecuting time: 0.11 s
+
+DFS Solution with i = 10:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 24.55 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 11:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 21.86 KB
+Excecuting time: 0.1 s
+
+DFS Solution with i = 12:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 28.01 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 13:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 25.2 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 14:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 33.35 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 15:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 30.68 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 16:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 29.96 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 17:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 35.69 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 18:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.12 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 19:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.87 KB
+Excecuting time: 0.18 s
+
+DFS Solution with i = 20:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.61 KB
+Excecuting time: 0.12 s
+
+DFS Solution with i = 21:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.57 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 22:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 39.91 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 23:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.61 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 24:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.8 KB
+Excecuting time: 0.26 s
+
+DFS Solution with i = 25:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 40.53 KB
+Excecuting time: 0.21 s
+
+DFS Solution with i = 26:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.77 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 27:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.17 KB
+Excecuting time: 0.21 s
+
+DFS Solution with i = 28:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.9 KB
+Excecuting time: 0.3 s
+
+DFS Solution with i = 29:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 41.87 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 30:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.88 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 31:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.35 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 32:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 50.43 KB
+Excecuting time: 0.2 s
+
+DFS Solution with i = 33:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.84 KB
+Excecuting time: 0.18 s
+
+DFS Solution with i = 34:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.96 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 35:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.32 KB
+Excecuting time: 0.22 s
+
+DFS Solution with i = 36:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.73 KB
+Excecuting time: 0.22 s
+
+DFS Solution with i = 37:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.6 KB
+Excecuting time: 0.12 s
+
+DFS Solution with i = 38:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.75 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 39:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 52.26 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 40:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.97 KB
+Excecuting time: 0.47 s
+
+DFS Solution with i = 41:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 48.5 KB
+Excecuting time: 0.24 s
+
+DFS Solution with i = 42:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 53.46 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 43:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 39.45 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 44:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 44.15 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 45:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.8 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 46:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 50.1 KB
+Excecuting time: 0.21 s
+
+DFS Solution with i = 47:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.23 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 48:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 52.32 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 49:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.09 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 50:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 50.04 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 51:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 49.06 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 52:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 47.35 KB
+Excecuting time: 0.18 s
+
+DFS Solution with i = 53:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 48.72 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 54:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.73 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 55:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.31 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 56:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.61 KB
+Excecuting time: 0.11 s
+
+DFS Solution with i = 57:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 43.76 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 58:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.25 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 59:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 45.11 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 60:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 38.51 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 61:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.79 KB
+Excecuting time: 0.17 s
+
+DFS Solution with i = 62:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 39.33 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 63:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 36.06 KB
+Excecuting time: 0.16 s
+
+DFS Solution with i = 64:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 42.68 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 65:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 34.73 KB
+Excecuting time: 0.13 s
+
+DFS Solution with i = 66:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 33.16 KB
+Excecuting time: 0.11 s
+
+DFS Solution with i = 67:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 35.06 KB
+Excecuting time: 0.14 s
+
+DFS Solution with i = 68:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 29.4 KB
+Excecuting time: 0.15 s
+
+DFS Solution with i = 69:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 31.31 KB
+Excecuting time: 0.1 s
+
+DFS Solution with i = 70:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 26.8 KB
+Excecuting time: 0.11 s
+
+DFS Solution with i = 71:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 29.4 KB
+Excecuting time: 0.1 s
+
+DFS Solution with i = 72:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 30.98 KB
+Excecuting time: 0.09 s
+
+DFS Solution with i = 73:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 26.24 KB
+Excecuting time: 0.09 s
+
+DFS Solution with i = 74:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 18.73 KB
+Excecuting time: 0.11 s
+
+DFS Solution with i = 75:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 22.14 KB
+Excecuting time: 0.05 s
+
+DFS Solution with i = 76:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 17.43 KB
+Excecuting time: 0.1 s
+
+DFS Solution with i = 77:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 16.66 KB
+Excecuting time: 0.08 s
+
+DFS Solution with i = 78:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 16.62 KB
+Excecuting time: 0.06 s
+
+DFS Solution with i = 79:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 14.03 KB
+Excecuting time: 0.06 s
+
+DFS Solution with i = 80:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 14.69 KB
+Excecuting time: 0.05 s
+
+DFS Solution with i = 81:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 11.12 KB
+Excecuting time: 0.05 s
+
+DFS Solution with i = 82:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 8.29 KB
+Excecuting time: 0.05 s
+
+DFS Solution with i = 83:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 7.14 KB
+Excecuting time: 0.04 s
+
+DFS Solution with i = 84:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 9.41 KB
+Excecuting time: 0.04 s
+
+DFS Solution with i = 85:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 13.46 KB
+Excecuting time: 0.06 s
+
+DFS Solution with i = 86:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 5.1 KB
+Excecuting time: 0.03 s
+
+DFS Solution with i = 87:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 4.74 KB
+Excecuting time: 0.02 s
+
+DFS Solution with i = 88:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 3.74 KB
+Excecuting time: 0.03 s
+
+DFS Solution with i = 89:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 2.0 KB
+Excecuting time: 0.02 s
+
+DFS Solution with i = 90:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.97 KB
+Excecuting time: 0.02 s
+
+DFS Solution with i = 91:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 4.02 KB
+Excecuting time: 0.02 s
+
+DFS Solution with i = 92:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.17 KB
+Excecuting time: 0.02 s
+
+DFS Solution with i = 93:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.15 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 94:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.35 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 95:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.35 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 96:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 1.15 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 97:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.34 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 98:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.33 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 99:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.32 KB
+Excecuting time: 0.01 s
+
+DFS Solution with i = 100:
+
+Successful solution!
+
+------------------------------
+The most memory usage: 0.17 KB
+Excecuting time: 0.0 s
+
+==========================================================================================
+Memory tracing:  [0.68, 4.21, 3.42, 11.63, 9.01, 14.28, 11.12, 20.46, 16.72, 18.29, 24.55, 21.86, 28.01, 25.2, 33.35, 30.68, 29.96, 35.69, 38.12, 40.87, 38.61, 38.57, 39.91, 38.61, 44.8, 40.53, 41.77, 43.17, 41.9, 41.87, 42.88, 42.35, 50.43, 47.84, 45.96, 45.32, 49.73, 43.6, 49.75, 52.26, 49.97, 48.5, 53.46, 39.45, 44.15, 42.8, 50.1, 45.23, 52.32, 45.09, 50.04, 49.06, 47.35, 48.72, 42.73, 43.31, 42.61, 43.76, 45.25, 45.11, 38.51, 42.79, 39.33, 36.06, 42.68, 34.73, 33.16, 35.06, 29.4, 31.31, 26.8, 29.4, 30.98, 26.24, 18.73, 22.14, 17.43, 16.66, 16.62, 14.03, 14.69, 11.12, 8.29, 7.14, 9.41, 13.46, 5.1, 4.74, 3.74, 2.0, 1.97, 4.02, 1.17, 1.15, 0.35, 0.35, 1.15, 0.34, 0.33, 0.32, 0.17]
+Executing time tracing:  [58.7, 39.06, 51.99, 97.35, 64.29, 94.11, 138.89, 172.09, 117.88, 113.65, 168.99, 103.54, 159.33, 164.6, 168.29, 161.71, 170.95, 131.2, 145.01, 175.64, 118.58, 161.87, 147.1, 137.47, 256.08, 207.34, 160.72, 211.89, 299.27, 130.61, 159.17, 148.17, 201.92, 175.45, 146.14, 221.67, 224.95, 116.22, 162.27, 156.13, 465.68, 235.24, 167.18, 142.23, 167.28, 140.13, 208.91, 146.69, 135.67, 133.78, 131.68, 146.41, 176.43, 152.18, 155.69, 160.25, 105.34, 166.87, 126.89, 126.77, 140.73, 174.35, 134.32, 155.57, 151.33, 134.62, 109.48, 136.25, 146.55, 101.84, 108.6, 104.21, 89.66, 89.41, 113.06, 54.34, 96.65, 76.74, 60.15, 56.77, 49.67, 52.53, 50.28, 38.39, 41.66, 59.37, 31.13, 23.0, 27.51, 19.41, 15.13, 20.13, 15.1, 13.54, 13.61, 12.87, 9.07, 8.32, 7.9, 5.93, 0.9]

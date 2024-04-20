@@ -108,6 +108,13 @@ class MineSweeperCore:
                         self.map[position[0]][position[1]] = len(self.get_bomb_around(position[0], position[1]))
                     else:
                         self.map[x][y] = len(self.get_bomb_around(x, y))
+                
+    def check_completed_map(self):
+        for x in range(self.rows):
+            for y in range(self.columns):
+                if not self.official_check_completed(x, y):
+                    return False
+        return True
 
     def print_map(self):
         max_row_length = max(len(' | '.join(map(str, row))) for row in self.map)
@@ -145,6 +152,13 @@ class MineSweeperCore:
             val = self.official_map[x][y]
             cells = len(self.official_get_cells_around(x, y))
             return (val == len(self.official_get_bombs_around(x, y)) and (cells - val) == len(self.official_get_emptys_around(x, y)) + len(self.official_get_numbers_around(x, y)))
+        elif self.official_map[x][y] == -3:
+            ls = self.official_get_numbers_around(x, y)
+            if len(ls) == 0:
+                self.move(x, y, 'l')
+                return True
+            else:
+                return self.official_check_completed(ls[0][0], ls[0][1])
         else:
             return True
 
@@ -248,12 +262,6 @@ class MineSweeperCore:
             self.const_rules(a, b, stack)
         if not self.check_completed_map():
             return False
-        return True
-            
-    def check_completed_map(self):
-        for pos in self.official_get_number_positions():
-            if not self.official_check_completed(pos[0], pos[1]):
-                return False
         return True
     
     def official_get_best_potential_cell(self):
