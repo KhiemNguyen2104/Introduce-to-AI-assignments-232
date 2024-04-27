@@ -4,6 +4,7 @@ from colorama import Style
 from enum import Enum
 from re import match
 from random import choice
+from random import random
 
 def print_bitboard(bitboard: int) -> None:
     square = 63
@@ -486,8 +487,6 @@ class Chess:
     
     def alphabeta(self, depth, alpha, beta, minimize: bool):
         lst = self.get_legal_move()
-        if depth:
-            print(f"depth = {depth}, num(child) = {len(lst)}")
         if (ret := self.is_goal_state(lst)) not in [0, 1]:
             return 0, None
         elif ret == 1:
@@ -505,6 +504,9 @@ class Chess:
                 if val > child_val:
                     val = child_val
                     best_move = move
+                elif val == child_val and random() > .5:
+                    best_move = move
+                    
                 self.undo_move(old_state)
 
                 if val < alpha:
@@ -519,6 +521,9 @@ class Chess:
                 if val < child_val:
                     val = child_val
                     best_move = move
+                elif val == child_val and random() > .5:
+                    best_move = move
+
                 self.undo_move(old_state)
 
                 if val > beta:
@@ -529,7 +534,8 @@ class Chess:
         return val, best_move
     
     def bot_turn_v1(self, lst: list[int], play_as_black: bool):
-        val, best_move = self.alphabeta(3, -1000, 1000, play_as_black)
+        print("Bot is thinking...")
+        val, best_move = self.alphabeta(10, -1000, 1000, play_as_black)
         return self.make_move(best_move)
     
     def main(self):
