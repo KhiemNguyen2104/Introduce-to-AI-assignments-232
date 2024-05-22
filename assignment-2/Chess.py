@@ -535,7 +535,7 @@ class Chess:
     
     def bot_turn_v1(self, lst: list[int], play_as_black: bool):
         print("Bot is thinking...")
-        val, best_move = self.alphabeta(10, -1000, 1000, play_as_black)
+        val, best_move = self.alphabeta(6, -1000, 1000, play_as_black)
         return self.make_move(best_move)
     
     def main(self):
